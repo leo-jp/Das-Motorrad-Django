@@ -10,13 +10,22 @@ A web application based on Django Framework.
 - [Useful Resources](#useful-resources)
 
 ### Prerequisites
+##### Technologies
 * [Python](https://www.python.org/): Version 9
 * [Django](https://www.djangoproject.com/download/): Version 4.0
 * [Editor](#useful-resources): Visual Code, PyCharm, or an editor of your choice.
+##### Security
+* Turn off `DEBUG` on `Production` environment.
+* Move out `SECRET_KEY` from `settings.py` and replace it with Django's `get_random_secret_key()`.
+    ```
+    from django.core.management.utils import get_random_secret_key
+    SECRET_KEY = get_random_secret_key()
+    ```
+* If the `SECRET_KEY` is accidentally pushed to production, generate new secret key and do not use the compromised ones. (see: [Secure Your Secret Key](#django))
 
 ### Django Essential Training
-* MVT Framework
-* Turn off `DEBUG` on `Production` environment.
+#### Django's Rule of Thumb
+* Django follows MVT (Model-View-Template) Framework.
 * Each page is separated through Django's `App`. (e.g. `home`)
 * Each `App` contains `Template` folder that is rendered from the `View`.
 * A Django `App` must be self-contained, meaning, independent and can be reused to other Django projects without a hitch.
@@ -49,8 +58,10 @@ A web application based on Django Framework.
 #### Editor
 * [Microsoft Visual Code](https://code.visualstudio.com/)
 * [Jetbrains PyCharm](https://www.jetbrains.com/pycharm/)
+
 #### Django
 * [Documentation](https://docs.djangoproject.com)
+* [Secure your Secret Key](https://github.com/django/django/blob/1.10/django/core/management/utils.py#L81)
 * [Essential Training](https://www.linkedin.com/learning/django-essential-training/)
 
 #### Github
