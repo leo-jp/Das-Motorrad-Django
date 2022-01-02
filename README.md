@@ -19,6 +19,7 @@ A web application based on Django Framework.
 * Turn off `DEBUG` on `Production` environment.
 * Each page is separated through Django's `App`. (e.g. `home`)
 * Each `App` contains `Template` folder that is rendered from the `View`.
+* A Django `App` must be self-contained, meaning, independent and can be reused to other Django projects without a hitch.
 
 
 #### Django Fundamental Commands
