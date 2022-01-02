@@ -61,10 +61,12 @@ A web application based on Django Framework.
 
 #### Django
 * [Documentation](https://docs.djangoproject.com)
+* [Django Secret Key](https://docs.gitguardian.com/secrets-detection/detectors/specifics/django_secret_key)
 * [Secure your Secret Key](https://github.com/django/django/blob/1.10/django/core/management/utils.py#L81)
 * [Essential Training](https://www.linkedin.com/learning/django-essential-training/)
 
 #### Github
+* [Secrets API Management](https://blog.gitguardian.com/secrets-api-management/?utm_source=product&utm_medium=product&utm_campaign=white_knight_v2)
 * [Project Versions](VERSIONS.md)
 * [What to do when you commit to the wrong git branch](https://www.clearvision-cm.com/blog/what-to-do-when-you-commit-to-the-wrong-git-branch/)
 
