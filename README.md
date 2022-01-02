@@ -53,6 +53,7 @@ A web application based on Django Framework.
 * [Essential Training](https://www.linkedin.com/learning/django-essential-training/)
 
 #### Github
+* [Project Versions](VERSIONS.md)
 * [What to do when you commit to the wrong git branch](https://www.clearvision-cm.com/blog/what-to-do-when-you-commit-to-the-wrong-git-branch/)
 
 * [How to Create a Free Website Using GitHub Pages](https://www.youtube.com/watch?v=o5g-lUuFgpg)
