@@ -1,5 +1,6 @@
 # Project Versions
-### v.0.6 - Update Docs: best practices
+### v.0.7 - Move Django Secrets
+### v.0.6 - Update Documentation
 ### v.0.5 - Create Template from Django App
 ### v.0.4 - Create VERSIONS.md
 ### v.0.3 - Create Django App
