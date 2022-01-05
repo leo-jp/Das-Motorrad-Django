@@ -1,4 +1,5 @@
 # Project Versions
+### v.0.11 - Add admin superuser, remove cached db, secret keys
 ### v.0.10 - Modularization of a Django App
 ### v.0.9 - Update Documentation
 ### v.0.8 - Django get_random_secret_key()

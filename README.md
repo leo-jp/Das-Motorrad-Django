@@ -28,7 +28,7 @@ A web application based on Django Framework.
 * Django follows MVT (Model-View-Template) Framework.
 * Each page is separated through Django's `App`. (e.g. `home`)
 * Each `App` contains `Template` folder that is rendered from the `View`.
-* A Django `App` must be self-contained, meaning, independent and can be reused to other Django projects without a hitch.
+* A Django `App` must be self-contained, meaning, independent and can be reused to other Django projects without a hitch. see `home/urls.py` for more details.
 
 
 #### Django Fundamental Commands
@@ -52,7 +52,11 @@ A web application based on Django Framework.
 
 ### RESTFUL API's
 
+### Unit Tests
+
 ### Security Practices
+
+### Building Django Projects with Bulma CSS
 
 ### Useful Resources
 #### Editor

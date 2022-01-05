@@ -3,6 +3,9 @@ dasmotorrad/__pycache__/**
 home/__pycache__/**
 home/migrations/__pycache__/**
 
+# Database
+db.sqlite3
+
 # IDE specific files
 .idea/
 .vscode/
