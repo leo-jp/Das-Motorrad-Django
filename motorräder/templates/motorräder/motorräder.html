@@ -1,0 +1,14 @@
+<html>
+    <header><title>Das Motorrad - Motorräder</title></header>
+    <body>
+        <ul>
+            {% for motorrad in motorräder%}
+            <li>{{motorrad.brand}}</li>
+            <li>{{motorrad.origin}}</li>
+            <li>{{motorrad.year}}</li>
+            <li>{{motorrad.history}}</li>
+            <li>{{motorrad.source}}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

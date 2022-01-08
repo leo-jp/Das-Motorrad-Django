@@ -80,6 +80,11 @@ For more information, visit: [Django Queries](#django)
 ```
 
 ### RESTFUL API's
+| API  | Description |
+| ---- | ----------- |
+| motorräder/ | Returns a list of motorcycle companies |
+| motorräder/\<company> | Returns a list of motorcycles from a given \<company> |
+| motorräder/\<company>/\<motorrad>  | Returns a motorcycle model from a specific \<company>  |
 
 ### Unit Tests
 
