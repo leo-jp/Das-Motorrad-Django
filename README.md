@@ -81,6 +81,14 @@ For more information, visit: [Django Queries](#django)
 
 ##### Class-based Views
 For more information, visit: [Django Class-based Views](#django)
+```
+from django.views.generic import ListView
+
+class MotorräderView(ListView):
+    model = Motorräder # from models.py
+    context_object_name = "motorräder" # a variable that is called from an HTML View
+    template_name = "motorräder/motorräder.html" # an HTML View to render the model
+```
 
 ### RESTFUL API's
 | API  | Description |
