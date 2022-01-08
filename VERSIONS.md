@@ -1,4 +1,5 @@
 # Project Versions
+### v.0.16 - Class-based Views for Home App
 ### v.0.15 - Create Simple REST API endpoints
 ### v.0.14 - Create Motorräder App
 ### v.0.13 - User Authentication

@@ -79,6 +79,9 @@ For more information, visit: [Django Queries](#django)
 >>> Motorräder.objects.filter(year__icontains='19').exclude(origin__icontains='Germany')
 ```
 
+##### Class-based Views
+For more information, visit: [Django Class-based Views](#django)
+
 ### RESTFUL API's
 | API  | Description |
 | ---- | ----------- |
@@ -103,6 +106,7 @@ For more information, visit: [Django Queries](#django)
 * [Secure your Secret Key](https://github.com/django/django/blob/1.10/django/core/management/utils.py#L81)
 * [Essential Training](https://www.linkedin.com/learning/django-essential-training/)
 * [Django Queries](https://docs.djangoproject.com/en/4.0/topics/db/queries/#retrieving-all-objects)
+* [Django Class-based Views](https://docs.djangoproject.com/en/4.0/topics/class-based-views/)
 
 #### Github
 * [Secrets API Management](https://blog.gitguardian.com/secrets-api-management/?utm_source=product&utm_medium=product&utm_campaign=white_knight_v2)
