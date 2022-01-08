@@ -49,6 +49,35 @@ A web application based on Django Framework.
 # project > urls.py > url patterns > add <view>
 ```
 
+##### ORM - Object Relational Mapping
+```
+ORM: Classes > MakeMigrations > Migrate > Database
+```
+
+##### Django Shell
+For more information, visit: [Django Queries](#django)
+```
+>>> from motorräder.models import Motorräder 
+
+# Select Object
+>>> motorcycles = Motorräder.objects.get(pk='1')
+
+# Query values from an Object
+>>> motorcycles.brand
+
+# list all objects from a Database
+>>> Motorräder.objects.all()
+<QuerySet [<Motorräder: Motorräder object (1)>]>
+
+# Create a new object
+>>> new_motorcycles = Motorräder.objects.create(brand, origin, year, history)
+
+# Filter & Exclude Query
+>>> Motorräder.objects.filter(brand__startswith='B')
+>>> Motorräder.objects.filter(origin__icontains='Germany')
+>>> Motorräder.objects.exclude(origin__icontains='Germany')
+>>> Motorräder.objects.filter(year__icontains='19').exclude(origin__icontains='Germany')
+```
 
 ### RESTFUL API's
 
@@ -68,6 +97,7 @@ A web application based on Django Framework.
 * [Django Secret Key](https://docs.gitguardian.com/secrets-detection/detectors/specifics/django_secret_key)
 * [Secure your Secret Key](https://github.com/django/django/blob/1.10/django/core/management/utils.py#L81)
 * [Essential Training](https://www.linkedin.com/learning/django-essential-training/)
+* [Django Queries](https://docs.djangoproject.com/en/4.0/topics/db/queries/#retrieving-all-objects)
 
 #### Github
 * [Secrets API Management](https://blog.gitguardian.com/secrets-api-management/?utm_source=product&utm_medium=product&utm_campaign=white_knight_v2)

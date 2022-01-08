@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     # additional apps
     'home',
+    'motorräder',
 ]
 
 MIDDLEWARE = [
