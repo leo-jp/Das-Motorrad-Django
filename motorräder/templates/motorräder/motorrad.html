@@ -1,10 +1,9 @@
-<html>
-    <header><title>Das Motorrad - Motorräder</title></header>
-    <body>
-        <h1>{{motorrad.brand}}</h1>
-        <h2>{{motorrad.origin}}</h2>
-        <h3>{{motorrad.year}}</h3>
-        <p>{{motorrad.history}}</p>
-        <a>{{motorrad.source}}</a>
-    </body>
-</html>
+{% extends "base.html" %}
+
+{% block content %} 
+    <h1>{{motorrad.brand}}</h1>
+    <h2>{{motorrad.origin}}</h2>
+    <h3>{{motorrad.year}}</h3>
+    <p>{{motorrad.history}}</p>
+    <a>{{motorrad.source}}</a>
+{% endblock %}

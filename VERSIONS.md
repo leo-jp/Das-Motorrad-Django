@@ -1,4 +1,6 @@
 # Project Versions
+### v.0.20 - Fix HomeView extra_context
+### v.0.19 - Base HTML template
 ### v.0.18 - Introducing Static Files
 ### v.0.17 - Complex Class-based Views for Motorräder App
 ### v.0.16 - Class-based Views for Home App

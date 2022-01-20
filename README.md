@@ -17,7 +17,7 @@ A web application based on Django Framework.
 ##### Security
 * Turn off `DEBUG` on `Production` environment.
 * Move out `SECRET_KEY` from `settings.py` and replace it with Django's `get_random_secret_key()`.
-    ```
+    ```python
     from django.core.management.utils import get_random_secret_key
     SECRET_KEY = get_random_secret_key()
     ```
@@ -33,30 +33,30 @@ A web application based on Django Framework.
 
 #### Django Fundamental Commands
 ##### Create a Project
-```
+```python
 # Create a Project: django-admin startproject <project> <path>
 # e.g. django-admin startproject dasmotorrad .
 ```
 ##### Start the Project
-```
+```python
 # python manage.py runserver
 ```
 
 ##### Create New App and adding to Project. 
-```
+```python
 # django-admin startapp <app>
 # project > settings.py > installed apps > add <app> 
 # project > urls.py > url patterns > add <view>
 ```
 
 ##### ORM - Object Relational Mapping
-```
+```python
 ORM: Classes > MakeMigrations > Migrate > Database
 ```
 
 ##### Django Shell
 For more information, visit: [Django Queries](#django)
-```
+```python
 >>> from motorräder.models import Motorräder 
 
 # Select Object
@@ -81,7 +81,7 @@ For more information, visit: [Django Queries](#django)
 
 ##### Class-based Views
 For more information, visit: [Django Class-based Views](#django)
-```
+```python
 from django.views.generic import ListView
 
 class MotorräderView(ListView):
@@ -96,10 +96,83 @@ class MotorräderView(ListView):
   * Javascripts
   * Images
   * Videos 
-* To use the static folder to your project, go to `Project > settings.py > Static Files`. 
-  * Where `dasmotorrad` is the <Project\>
-* See [Static Files](#static)
+* For more examples, checkout [Static Files](static/)
+* To use the static folder to your project, go to `Project > settings.py > Static Files`. Where `Project` is `dasmotorrad`
+```python
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/4.0/howto/static-files/
 
+STATIC_URL = 'static/'
+# Additional configurations
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
+```
+```html
+/** Loading Static File */
+{% load static %}
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+    </head>
+    <header><title>Das Motorrad - Motorräder</title></header>
+    <body>
+        <h1>Motorräder Companies</h1>
+        <ul>
+            {% for motorrad in motorräder%}
+            <li class="motorcycles-li">{{motorrad.brand}}</li>
+            <li>{{motorrad.origin}}</li>
+            <li>{{motorrad.year}}</li>
+            <li>{{motorrad.history}}</li>
+```
+
+
+##### HTML Template
+* An HTML Template that can accept injections from other HTML files.
+* To make the templates available to the project, go to `Project > settings.py > TEMPLATES`. 
+```python
+TEMPLATES = [
+    {
+      ...
+        'DIRS': [
+            BASE_DIR / 'static/templates'
+        ],
+      ...
+    },
+]
+```
+* See [base.html](static/template/base.html)
+```html
+/** Creating Template */
+{% load static %}
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+    </head>
+    <body>
+        {% block content %} /* the content is the variable that is used for injecting HTML contents */
+        {% endblock %}
+    </body>
+</html>
+
+/** Usage */
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Motorräder Companies</h1>
+    <ul>
+        {% for motorrad in motorräder%}
+        <li class="motorcycles-li">{{motorrad.brand}}</li>
+        <li>{{motorrad.origin}}</li>
+        <li>{{motorrad.year}}</li>
+        <li>{{motorrad.history}}</li>
+        <li>{{motorrad.source}}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+```
 
 ### RESTFUL API's
 | API  | Description |

@@ -1,20 +1,14 @@
-{% load static %}
+{% extends "base.html" %}
 
-<html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
-    </head>
-    <header><title>Das Motorrad - Motorräder</title></header>
-    <body>
-        <h1>Motorräder Companies</h1>
-        <ul>
-            {% for motorrad in motorräder%}
-            <li class="motorcycles-li">{{motorrad.brand}}</li>
-            <li>{{motorrad.origin}}</li>
-            <li>{{motorrad.year}}</li>
-            <li>{{motorrad.history}}</li>
-            <li>{{motorrad.source}}</li>
-            {% endfor %}
-        </ul>
-    </body>
-</html>
+{% block content %}
+    <h1>Motorräder Companies</h1>
+    <ul>
+        {% for motorrad in motorräder%}
+        <li class="motorcycles-li">{{motorrad.brand}}</li>
+        <li>{{motorrad.origin}}</li>
+        <li>{{motorrad.year}}</li>
+        <li>{{motorrad.history}}</li>
+        <li>{{motorrad.source}}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
