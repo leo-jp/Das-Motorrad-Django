@@ -90,6 +90,17 @@ class MotorräderView(ListView):
     template_name = "motorräder/motorräder.html" # an HTML View to render the model
 ```
 
+##### Static Files
+* A Static Folder contains some but not limited to:
+  * CSS
+  * Javascripts
+  * Images
+  * Videos 
+* To use the static folder to your project, go to `Project > settings.py > Static Files`. 
+  * Where `dasmotorrad` is the <Project\>
+* See [Static Files](#static)
+
+
 ### RESTFUL API's
 | API  | Description |
 | ---- | ----------- |

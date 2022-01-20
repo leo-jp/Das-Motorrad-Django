@@ -1,4 +1,5 @@
 # Project Versions
+### v.0.18 - Introducing Static Files
 ### v.0.17 - Complex Class-based Views for Motorräder App
 ### v.0.16 - Class-based Views for Home App
 ### v.0.15 - Create Simple REST API endpoints

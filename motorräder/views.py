@@ -11,5 +11,6 @@ class MotorräderView(ListView):
     
 class MotorradView(DetailView):
     model = Motorräder
+    pk_url_kwarg = 'company'
     context_object_name = "motorrad"
     template_name = "motorräder/motorrad.html"

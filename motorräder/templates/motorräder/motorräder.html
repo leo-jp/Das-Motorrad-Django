@@ -1,10 +1,15 @@
+{% load static %}
+
 <html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+    </head>
     <header><title>Das Motorrad - Motorräder</title></header>
     <body>
         <h1>Motorräder Companies</h1>
         <ul>
             {% for motorrad in motorräder%}
-            <li>{{motorrad.brand}}</li>
+            <li class="motorcycles-li">{{motorrad.brand}}</li>
             <li>{{motorrad.origin}}</li>
             <li>{{motorrad.year}}</li>
             <li>{{motorrad.history}}</li>
